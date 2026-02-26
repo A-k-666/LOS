@@ -25,19 +25,19 @@ export default function Login() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - behind everything */}
+      {/* Background Image - behind everything, darker in dark mode */}
       <img 
         src="/bg.jpg" 
         alt="Background" 
-        className="fixed inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+        className="fixed inset-0 w-full h-full object-cover pointer-events-none dark:opacity-20 opacity-30"
         style={{ zIndex: -2 }}
       />
       {/* Simple Ocean Background - above bg.jpg, below content */}
       <div style={{ zIndex: -1 }}>
         <OceanBackground />
       </div>
-      {/* Light overlay to blend - very subtle */}
-      <div className="fixed inset-0 bg-gradient-to-br from-background/20 via-background/20 to-secondary/20 z-0 pointer-events-none" />
+      {/* Strong overlay to make UI clear - especially in dark mode */}
+      <div className="fixed inset-0 bg-gradient-to-br from-background/80 via-background/85 to-background/80 dark:from-background/90 dark:via-background/92 dark:to-background/90 z-0 pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
