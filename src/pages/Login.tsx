@@ -32,7 +32,7 @@ export default function Login() {
         className="fixed inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
         style={{ zIndex: -2 }}
       />
-      {/* Three.js Ocean Background - above bg.jpg, below content */}
+      {/* Simple Ocean Background - above bg.jpg, below content */}
       <div style={{ zIndex: -1 }}>
         <OceanBackground />
       </div>
