@@ -127,10 +127,13 @@ export default function OceanBackground() {
         gl={{ 
           antialias: true, 
           alpha: true,
-          powerPreference: "high-performance"
+          powerPreference: "high-performance",
+          stencil: false,
+          depth: true
         }}
-        dpr={[1, 2]}
+        dpr={Math.min(window.devicePixelRatio, 2)}
         style={{ background: 'transparent' }}
+        frameloop="always"
       >
         <ambientLight intensity={0.6} />
         <pointLight position={[10, 10, 10]} intensity={1.0} />
