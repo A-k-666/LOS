@@ -17,9 +17,22 @@ export default function TodayFocus() {
 
   return (
     <div className="space-y-8">
-      <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
-        <h1 className="text-3xl font-display font-bold text-foreground">Today Focus</h1>
-        <p className="text-muted-foreground">Your next best action. No thinking required.</p>
+      <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
+        <div className="space-y-2">
+          <h1 className="text-3xl font-display font-bold text-foreground">Today Focus</h1>
+          <p className="text-muted-foreground">Your next best action. No thinking required.</p>
+        </div>
+        {/* Motto */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="glass-panel rounded-xl p-4 border-l-4 border-primary"
+        >
+          <p className="text-lg font-display font-semibold text-foreground leading-tight">
+            Every second counts. <span className="text-gradient-ocean bg-clip-text text-transparent">You're on a mission.</span>
+          </p>
+        </motion.div>
       </motion.div>
 
       <motion.div

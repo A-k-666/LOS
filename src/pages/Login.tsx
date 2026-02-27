@@ -65,6 +65,9 @@ export default function Login() {
             <p className="text-muted-foreground text-sm">
               Capture first. Organize later. Execute without thinking.
             </p>
+            <p className="text-foreground/80 text-xs font-medium mt-2">
+              Every second counts. You're on a mission.
+            </p>
           </motion.div>
 
           <motion.form
